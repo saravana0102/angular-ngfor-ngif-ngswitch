@@ -1,0 +1,18 @@
+<hello name="{{ name }}"></hello>
+<p>
+  This code helps to understand the simple usage of structural directives <b>ngFor/ngIf/ngSwitch</b>
+</p>  
+<button (click)="show=!show">Show/Hide</button>
+<div *ngIf="show">
+  <ul>
+    <li *ngFor = "let i of nums">{{i}}</li>
+  </ul>
+</div>
+
+<div [ngSwitch]="numVal">
+  <p *ngSwitchCase="1">The number is 1</p>
+  <p *ngSwitchCase="2">The number is 2</p>
+  <p *ngSwitchCase="3">The number is 3</p>
+  <p *ngSwitchCase="4">The number is 4</p>
+  <p *ngSwitchDefault>The default value</p>
+</div>
